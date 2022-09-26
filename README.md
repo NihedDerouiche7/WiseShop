@@ -1,2 +1,2 @@
 # WiseShop
-E-commerce Project 
+MERN eCommerce Project
