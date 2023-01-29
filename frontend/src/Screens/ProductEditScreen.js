@@ -86,7 +86,7 @@ const ProductEditScreen = () => {
 
     return (
         <>
-            <Link to={`/admin/product/list`}>Go back</Link>
+            <Link to={`/admin/productlist`}>Go back</Link>
             <FormContainer>
                 <h1>Edit Product</h1>
               

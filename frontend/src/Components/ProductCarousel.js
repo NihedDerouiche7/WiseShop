@@ -26,17 +26,25 @@ console.log(products);
     console.log(products);
     return loading ? <Loader /> : error ? <Message variant="danger">  {error} </Message> : (
         <>
-        <Carousel pause='hover' className='bg-dark'>
+        <Carousel pause='hover' className='bg-dark' prevLabel="" nextLabel="" indicators="false" variant='light'>
            {
          products.map(product => (
              <Carousel.Item key={product._id}>
-                <Link to={`/products/${product._id}`} style={{position:"relative",    width: "100%", maxHeight: "500px"}} >
-                        <Image src={product.image} alt={product.name}  style={{   width: "100%", height: "100%"}}  fluid/>
+                <Link to={`/product/${product._id}`}  >
                 
-                    <Carousel.Caption className='carousel-caption' >
+                    <div className='carouselcaption'>
+
                         <h2> {product.name}  </h2>
+                    </div>
+                
+
+                        <Image src={product.image} alt={product.name}  fluid/>
+              
+                    <Carousel.Caption className='carousel-caption'>
+                
                         <h3> ${product.price} </h3>
                     </Carousel.Caption>
+
                 </Link>
             </Carousel.Item>
 

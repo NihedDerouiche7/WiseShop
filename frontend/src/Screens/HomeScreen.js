@@ -32,7 +32,7 @@ const {loading , error , products , page, pages}= productList
   return (
     <>
    <Meta></Meta>
-    {!keyword ? <ProductCarousel/>: <Link to='/' className='btn btn-light'>Go Back</Link> }
+    {!keyword ? <ProductCarousel/>: <Link to='/' className='btn btn-light'> <i className="fas fa-arrow-left fa-3x"></i></Link> }
       <h1> Latest products</h1>
       {loading ? <Loader/>: error  ? <Message variant="danger">{error}</Message> :(
         <>
